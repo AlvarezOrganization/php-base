@@ -2,7 +2,7 @@
 
 Imagen base de PHP de los proyectos Laravel de AlvarezOrganization:
 `php:8.4-fpm-alpine` con nginx, supervisor, el cliente de MySQL y las extensiones
-`pdo_mysql`, `bcmath`, `pcntl`, `opcache`, `zip`, `intl`, `gd` y `sodium` ya compiladas.
+`pdo_mysql`, `bcmath`, `pcntl`, `opcache`, `zip`, `intl`, `gd`, `sodium` y `redis` ya compiladas.
 
 ```dockerfile
 FROM ghcr.io/alvarezorganization/php-base:8.4 AS php-base

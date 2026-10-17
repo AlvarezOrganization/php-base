@@ -31,3 +31,8 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
         intl \
         gd \
         sodium
+
+# redis va aparte porque no viene en el código fuente de PHP (es de PECL). El
+# instalador de mlocati evita depender de la API de pecl.php.net, que falla seguido.
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+RUN install-php-extensions redis
